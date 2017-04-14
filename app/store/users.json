@@ -1,0 +1,66 @@
+[{
+  "text": "3G业务办理",
+  "cls": "folder",
+  "checked": false,
+  "expanded": true,
+  "children": [{
+    "text": "分类1",
+    "leaf": true,
+    "checked": true
+  },{
+    "text": "分类2",
+    "leaf": true,
+    "checked": false
+  },{
+    "text": "分类3",
+    "leaf": true,
+    "checked": false
+  }]
+},{
+  "text": "联通友情公告",
+  "cls": "folder",
+  "checked": false,
+  "children": [{
+    "text": "Bananas",
+    "leaf": true,
+    "checked": false
+  },{
+    "text": "Milk",
+    "leaf": true,
+    "checked": false
+  },{
+    "text": "Cereal",
+    "leaf": true,
+    "checked": false
+  },{
+    "text": "Energy foods",
+    "cls": "folder",
+    "checked": false,
+    "children": [{
+      "text": "Coffee",
+      "leaf": true,
+      "checked": false
+    },{
+      "text": "Red Bull",
+      "leaf": true,
+      "checked": false
+    }]
+  }]
+},{
+  "text": "积分月度查询",
+  "cls": "folder",
+  "checked": false,
+  "children": [{
+    "text": "Finish the budget",
+    "leaf": true,
+    "checked": false
+  },{
+    "text": "Call contractors",
+    "leaf": true,
+    "checked": false
+  },{
+    "text": "Choose design",
+    "leaf": true,
+    "checked": true
+  }]
+}]
