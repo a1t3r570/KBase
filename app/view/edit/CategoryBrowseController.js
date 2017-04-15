@@ -3,15 +3,17 @@
  */
 Ext.define('KBase.view.edit.CategoryBrowseController', {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.check-tree',
+    alias: 'controller.category-browse',
 
-    onBeforeCheckChange: function(record, checkedState, e) {
-        if (record.get('text') === 'Take a nap' && !checkedState) {
-            Ext.toast('No rest for the weary!', null, 't');
-            return false;
+    onCheckChange:function (node) {
+        node.checked = true;
+        var records = this.getView().getChecked();
+        for(var i = 0;i<records.length; ++i){
+            if(records[i].id != node.id){
+                records[i].set({checked:false});
+            }
         }
     },
-
     onCheckedNodesClick: function() {
         var records = this.getView().getChecked(),
             names = [];

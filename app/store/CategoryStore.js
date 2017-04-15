@@ -13,7 +13,12 @@ Ext.define('KBase.store.CategoryStore',{
                 // Extract child nodes from the items or children property in the dataset
                 return data.items || data.children;
             }
-        }
+        },
+        root:{
+            text:'知识库',
+            expanded:true,
+            checked:true,
+        },
     },
    //autoLoad:true
 });

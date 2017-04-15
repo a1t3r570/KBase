@@ -6,7 +6,7 @@
   "children": [{
     "text": "分类1",
     "leaf": true,
-    "checked": true
+    "checked": false
   },{
     "text": "分类2",
     "leaf": true,
@@ -61,6 +61,6 @@
   },{
     "text": "Choose design",
     "leaf": true,
-    "checked": true
+    "checked":false
   }]
 }]
