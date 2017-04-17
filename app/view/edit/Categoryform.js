@@ -35,6 +35,7 @@ Ext.define('KBase.view.edit.Categoryform',{
         items:[{
             xtype:'textfield',
             width:400,
+            reference:'categoryfield',
             name:'category',
             allowBlank:false,
         },{

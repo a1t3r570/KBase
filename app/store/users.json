@@ -37,7 +37,7 @@
     "cls": "folder",
     "checked": false,
     "children": [{
-      "text": "Coffee",
+      "text": "分类1",
       "leaf": true,
       "checked": false
     },{
@@ -51,7 +51,7 @@
   "cls": "folder",
   "checked": false,
   "children": [{
-    "text": "Finish the budget",
+    "text": "分类1",
     "leaf": true,
     "checked": false
   },{

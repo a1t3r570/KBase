@@ -14,11 +14,6 @@ Ext.define('KBase.store.CategoryStore',{
                 return data.items || data.children;
             }
         },
-        root:{
-            text:'知识库',
-            expanded:true,
-            checked:true,
-        },
     },
    //autoLoad:true
 });
