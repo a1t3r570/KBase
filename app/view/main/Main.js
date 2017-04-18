@@ -5,7 +5,7 @@
 Ext.define('KBase.view.main.Main',{ //主界面布局
     extend:'Ext.panel.Panel',
     layout:'anchor',
-    requires:['KBase.view.main.Header','KBase.view.main.Editpage'],
+    requires:['KBase.view.main.Header','KBase.view.main.Editpage',],//'KBase.view.main.Grid'
     //xtype:'mainview',
    initComponent:function () {
        Ext.setGlyphFontFamily('FontAwesome');
@@ -20,5 +20,11 @@ Ext.define('KBase.view.main.Main',{ //主界面布局
             xtype:'mainpage',
             anchor:"0 -60"
         }
+        /*{
+            xtype:'myGrid',
+            x:500,
+            y:200,
+            height:350,
+        }*/
     ]
 });

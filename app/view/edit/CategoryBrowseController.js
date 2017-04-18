@@ -3,12 +3,22 @@
  */
 var tpl_list = new Ext.XTemplate(
     '<tpl for=".">',
+    '<div class="list-item" style="background-color: #bfbfbf">',
     '<p>{text}</p>',
     '<p>{path}</p>',
+    '</div>',
     '<hr/>',
-    '</tpl>'
+    '</tpl>',
+    {
+        checkSelectedNode : function(data) {
+            //var me = this.getView();
+            //var node = me.items.first().getCmp(data.id);
+            //node.checked = true;
+            alert('z');
+        }
+    }
 );
-
+var path = '/知识库';          //返回最终路径                        //还是存在问题
 Ext.define('KBase.view.edit.CategoryBrowseController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.category-browse',
@@ -20,9 +30,7 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
                 records[i].set({checked:false});
             }
         };
-        me.path = node.getPath('text');
-        /*var el = me.lookupReference('pathlabel');
-        el.setHtml('<p>Path:</p>'+path);*/
+        path = node.getPath('text');
     },
     onSearchClick:function () {
         var me = this.getView();
@@ -34,7 +42,8 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
 
         function findchildnode(node) {//深度遍历
             if(node.data.text == phrase){
-                var data={text:'',path:''};
+                var data={id:'',text:'',path:''};
+                data.id = node.id;
                 data.text = node.data.text;
                 data.path = node.getPath('text');
                 list.push(data);
@@ -53,24 +62,16 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
         var cmp = me.lookupReference('searchfield');
         cmp.setValue('');
     },
-    onCheckedNodesClick: function() {
-        var records = this.getView().getChecked(),
-            names = [];
+    onSubmit:function () {//再考虑
 
-        Ext.Array.each(records, function(rec){
-            names.push(rec.get('text'));
-        });
-
-        Ext.MessageBox.show({
-            title: 'Selected Nodes',
-            msg: names.join('<br />'),
-            icon: Ext.MessageBox.INFO
-        });
-    },
-   /* onSubmitClick:function () {//再考虑
         var me =  this.getView();
-        var parent = me.up('window');//.up('window');
-        var cmp = parent.lookupReference('category_field');
-        cmp.setValue(me.path);
-    }*/
+        //var parent = me.up('window');//.up('window');
+        var cmp = Ext.getCmp('categoryfield');
+        cmp.setValue(path);
+        me.close();
+    },
+    onClose:function () {
+       var me = this.getView();
+       me.close();
+   },
 });

@@ -7,6 +7,7 @@ Ext.define('KBase.view.edit.CategoryformController',{
     onBrowseCategory:function () {
         ViewClass = Ext.ClassManager.get('KBase.view.edit.CategoryBrowse');
         cmp = new ViewClass();
+
     },
     onSave:function () {
 

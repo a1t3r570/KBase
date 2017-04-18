@@ -3,31 +3,11 @@
  */
 var store =Ext.create('KBase.store.CategoryStore',{
 });
-var tpl_list = new Ext.XTemplate(
-    '<tpl for=".">',
-    '<b>Text:{text}</b>',
-    '<br/>'
-);
-var data = {
-    name: 'Don Griffin',
-    title: 'Senior Technomage',
-    company: 'Sencha Inc.',
-    drinks: ['Coffee', 'Water', 'More Coffee'],
-    kids: [
-        { name: 'Aubrey',  age: 17 },
-        { name: 'Joshua',  age: 13 },
-        { name: 'Cale',    age: 10 },
-        { name: 'Nikol',   age: 5 },
-        { name: 'Solomon', age: 0 }
-    ]
-};
-var path = '/知识库';                       //最终返回的路径
 Ext.define('KBase.view.edit.CategoryBrowse',{
     //单不单例
     requires:[
         'KBase.view.edit.CategoryBrowseController'
     ],
-
     extend:'Ext.window.Window',                 //模态窗口
     modal:true,
     controller:'category-browse',
@@ -105,33 +85,19 @@ Ext.define('KBase.view.edit.CategoryBrowse',{
                 width:80,
                 handler:'onClearClick'
             }]
-        },/*{
-            reference:'pathlabel',
-            html:'<p>Path:</p>'+path,
-        },*/{
+        },{
             bodyPadding:5,
             scrollable:true,
             reference:'searchlist',
-            //title:'showList',
             flex:1
         }
         ]
     }],
     buttons:[{
         text:'确定',
-        handler:function () {
-            var win = this.up('window');
-            var parent = win.up('window');
-            var cmp = parent.lookupReference('categoryfield');
-            cmp.setValue(path);
-
-            win.close();
-        }
+        handler:'onSubmit'
     },{
         text:'关闭',
-        handler:function () {
-            var win = this.up('window');
-            win.close();
-        }
+        handler:'onClose'
     }]
 });
