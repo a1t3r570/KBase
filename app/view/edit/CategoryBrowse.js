@@ -1,8 +1,8 @@
 /**
  * Created by wql on 2017/4/12.
  */
-var store =Ext.create('KBase.store.CategoryStore',{
-});
+/*var store =Ext.create('KBase.store.CategoryStore',{
+});*/
 Ext.define('KBase.view.edit.CategoryBrowse',{
     //单不单例
     requires:[
@@ -31,25 +31,24 @@ Ext.define('KBase.view.edit.CategoryBrowse',{
     title:'浏览分类',
     items:[{                    //左树面板
         xtype:'treepanel',//onselectChange，mode也可以，再试
+        reference:'treepanel',
         flex:1,
         margin:10,
-        store:'{lefttree}',
+        bind:{
+            store:'{lefttree}'
+        },
         //checkPropagation: 'both',
         bufferedRenderer: false,
         animate:true,
         //rootVisible:false,
         //useArrows:true,
+        singleExpand:true,
         frame:true,
         // title:'分类树',
         //selModel:      //Ext.selection.Model,这是sel不是check,默认为Single，改变check要自己写
         scrollable:true,    //目前只能垂直滚动
         autoLoad:true,
 
-        root:{
-            text:'知识库',
-            expended:true,
-            checked:true
-        },
         listeners:{
             checkchange:'onCheckChange',
         }
@@ -92,8 +91,15 @@ Ext.define('KBase.view.edit.CategoryBrowse',{
         },{
             bodyPadding:5,
             scrollable:true,
-            reference:'searchlist',
-            flex:1
+            xtype: 'dataview',
+            reference:'dataview',
+            itemSelector:'div.list-item',
+            tpl:'<tpl for="."><div class="list-item" style="background-color: #bfbfbf"><p>{text}</p><p>{path}</p></div><hr/></tpl>',
+            flex:1,
+            bind:{
+                store:'{searchlist}',
+                selection:'{selectedsearchItem}',
+            }
         }
         ]
     }],

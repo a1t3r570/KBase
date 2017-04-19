@@ -2,13 +2,13 @@
   "text": "3G业务办理",
   "cls": "folder",
   "checked": false,
-  "expanded": true,
+  "expanded": false,
   "children": [{
     "text": "分类1",
     "leaf": true,
     "checked": false
   },{
-    "text": "分类2",
+    "text": "guy",
     "leaf": true,
     "checked": false
   },{
