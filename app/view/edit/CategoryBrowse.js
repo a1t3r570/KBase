@@ -6,11 +6,15 @@ var store =Ext.create('KBase.store.CategoryStore',{
 Ext.define('KBase.view.edit.CategoryBrowse',{
     //单不单例
     requires:[
-        'KBase.view.edit.CategoryBrowseController'
+        'KBase.view.edit.CategoryBrowseController',
+        'KBase.view.edit.CategoryBrowseViewModel'
     ],
     extend:'Ext.window.Window',                 //模态窗口
     modal:true,
     controller:'category-browse',
+    viewModel:{
+        type:'category'
+    },
     //resizeable:false,
     //draggable:false,
     xtype:'Ext.panel.Panel',
@@ -29,7 +33,7 @@ Ext.define('KBase.view.edit.CategoryBrowse',{
         xtype:'treepanel',//onselectChange，mode也可以，再试
         flex:1,
         margin:10,
-        store:store,
+        store:'{lefttree}',
         //checkPropagation: 'both',
         bufferedRenderer: false,
         animate:true,

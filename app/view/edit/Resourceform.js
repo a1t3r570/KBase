@@ -2,10 +2,16 @@
  * Created by wql on 2017/4/11.
  */
 Ext.define('KBase.view.edit.Resourceform',{
+    requires:[
+        'KBase.view.edit.CategoryformController',
+        'KBase.view.edit.CategoryBrowse'
+    ],
+    controller:'edit-form-controller',
+
     extend:'Ext.window.Window',                 //模态窗口
     modal:true,
     resizeable:false,
-    draggable:false,
+    //draggable:false,
 
     xtype:'Ext.form.Panel',
     frame:true,
@@ -29,6 +35,7 @@ Ext.define('KBase.view.edit.Resourceform',{
         items:[{
             xtype:'textfield',
             width:400,
+            id:'categoryfield',
             name:'category',
             allowBlank:false,
         },{
@@ -38,6 +45,7 @@ Ext.define('KBase.view.edit.Resourceform',{
             xtype:'button',
             text:'浏览',
             width:100,
+            handler:'onBrowseCategory'
         }]
     },{
         xtype: 'filefield',
@@ -47,17 +55,20 @@ Ext.define('KBase.view.edit.Resourceform',{
         xtype: 'displayfield',
         name: 'author',
         fieldLabel: '作者',
+        value:'wql',
     },{
         xtype: 'datefield',
         name: 'vaild_time',
         fieldLabel: '有效期至'
     },{
-        xtype: 'tagfield',
+        xtype:'textfield',
+        //xtype: 'tagfield',
         fieldLabel:'标签',
         name:'tag'
     }],
     buttons:[{                  //再修改
-        text:'保存'
+        text:'保存',
+        handler:'onSave'
     },{
         text:'提交审核'
     },{

@@ -2,10 +2,16 @@
  * Created by wql on 2017/4/11.
  */
 Ext.define('KBase.view.edit.Articleform',{
+    requires:[
+        'KBase.view.edit.CategoryformController',
+        'KBase.view.edit.CategoryBrowse'
+    ],
+    controller:'edit-form-controller',
+
     extend:'Ext.window.Window',
     modal:true,
     resizeable:false,
-    draggable:false,
+    // draggable:false,
 
     xtype:'Ext.form.Panel',
     frame:true,
@@ -29,6 +35,7 @@ Ext.define('KBase.view.edit.Articleform',{
         items:[{
             xtype:'textfield',
             width:400,
+            id:'categoryfield',
             name:'category',
             allowBlank:false,
         },{
@@ -38,6 +45,7 @@ Ext.define('KBase.view.edit.Articleform',{
             xtype:'button',
             text:'浏览',
             width:100,
+            handler:'onBrowseCategory'
         }]
     },{
         fieldLabel:'标题',
