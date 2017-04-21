@@ -29,6 +29,7 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
 
     onCheckChange:function (node) {
        var me = this.getView();        //获取对应视图类（如何全局,this无效问题）
+        this.onSearchClick();
         var records = me.items.first().getChecked();
         for(var i = 0;i<records.length; ++i){
             if(records[i].id != node.id){
@@ -86,10 +87,11 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
    },
 
     onSelect:function (selection) {
+        var me = this;
         if(selection){
-            this.lookup('treepanel').selectPath(selection.data.path,'text','/',function(success,lastNode,node){
-                lastNode.data.checked = true;
-                node.data.checked = true;
+            this.lookup('treepanel').selectPath(selection.data.path,'text','/',function(success,lastNode){
+                lastNode.set('checked',true);
+                me.onCheckChange(lastNode);
             });        //选中对应节点
 
         }

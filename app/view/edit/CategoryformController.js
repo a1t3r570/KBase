@@ -11,7 +11,7 @@ Ext.define('KBase.view.edit.CategoryformController',{
 
     },
     onSave:function () {
-        var form = this.getView();
+        var form = this.getView().down('form');
         if(form.getForm().isValid()){
             Ext.Ajax.request({
                 url:serverpath+'/save',

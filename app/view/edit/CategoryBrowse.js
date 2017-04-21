@@ -17,7 +17,7 @@ Ext.define('KBase.view.edit.CategoryBrowse',{
     },
     //resizeable:false,
     //draggable:false,
-    xtype:'Ext.panel.Panel',
+    //xtype:'Ext.panel.Panel',
     closable:false,
     frame:true,
     width:650,
@@ -51,6 +51,7 @@ Ext.define('KBase.view.edit.CategoryBrowse',{
 
         listeners:{
             checkchange:'onCheckChange',
+
         }
     },{
         xtype:'panel',

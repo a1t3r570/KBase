@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/view/edit/CategoryformController.js" line="16" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="021262c8-a30c-483c-989a-b32e0245a31b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store/users.json" afterPath="$PROJECT_DIR$/app/store/users.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/edit/Articleform.js" afterPath="$PROJECT_DIR$/app/view/edit/Articleform.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/edit/CategoryBrowse.js" afterPath="$PROJECT_DIR$/app/view/edit/CategoryBrowse.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/edit/CategoryBrowseController.js" afterPath="$PROJECT_DIR$/app/view/edit/CategoryBrowseController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/edit/CategoryBrowseViewModel.js" afterPath="$PROJECT_DIR$/app/view/edit/CategoryBrowseViewModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/edit/Categoryform.js" afterPath="$PROJECT_DIR$/app/view/edit/Categoryform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/edit/CategoryformController.js" afterPath="$PROJECT_DIR$/app/view/edit/CategoryformController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/edit/Resourceform.js" afterPath="$PROJECT_DIR$/app/view/edit/Resourceform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/main/Grid.js" afterPath="$PROJECT_DIR$/app/view/main/Grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/main/Main.js" afterPath="$PROJECT_DIR$/app/view/main/Main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,42 +31,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CategoryBrowse.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryBrowse.js">
+      <file leaf-file-name="Resourceform.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/view/edit/Resourceform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-936">
-              <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-              <folding>
-                <marker date="1492595978991" expanded="true" signature="2481:2506" ph="..." />
-              </folding>
+            <state relative-caret-position="507">
+              <caret line="86" column="19" lean-forward="true" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryBrowseViewModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryBrowseViewModel.js">
+      <file leaf-file-name="Articleform.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/edit/Articleform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#39#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryBrowseController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryBrowseController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="90" column="45" lean-forward="true" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#39#0" expanded="false" />
-                <element signature="e#2426#2545#0" expanded="false" />
-                <element signature="e#2572#2770#0" expanded="false" />
-                <element signature="e#2796#2853#0" expanded="false" />
-                <marker date="1492597303718" expanded="true" signature="130:155" ph="..." />
-              </folding>
+            <state relative-caret-position="560">
+              <caret line="74" column="15" lean-forward="true" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,25 +92,27 @@
         <option value="$PROJECT_DIR$/app/view/main/Editcontroller.js" />
         <option value="$PROJECT_DIR$/app/view/edit/CategoryScan.js" />
         <option value="$PROJECT_DIR$/app/view/main/Header.js" />
-        <option value="$PROJECT_DIR$/app/view/main/Editpage.js" />
         <option value="$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/store/CheckTree.js" />
         <option value="$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/view/form/CustomFields.js" />
         <option value="$PROJECT_DIR$/app/view/edit/CategoryBroweViewModel.js" />
-        <option value="$PROJECT_DIR$/app/view/edit/Categoryform.js" />
         <option value="$PROJECT_DIR$/app/view/main/grid.js" />
-        <option value="$PROJECT_DIR$/app/view/main/Grid.js" />
-        <option value="$PROJECT_DIR$/app/view/main/Main.js" />
-        <option value="$PROJECT_DIR$/app/view/edit/Articleform.js" />
-        <option value="$PROJECT_DIR$/app/view/edit/Resourceform.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/view/edit/CategoryformController.js" />
         <option value="$PROJECT_DIR$/app/model/User.js" />
-        <option value="$PROJECT_DIR$/app/Application.js" />
         <option value="$PROJECT_DIR$/app/store/CategoryStore.js" />
         <option value="$PROJECT_DIR$/app/store/users.json" />
         <option value="$PROJECT_DIR$/app/view/edit/CategoryBrowseViewModel.js" />
-        <option value="$PROJECT_DIR$/app/view/edit/CategoryBrowse.js" />
         <option value="$PROJECT_DIR$/app/view/edit/CategoryBrowseController.js" />
+        <option value="$PROJECT_DIR$/app/view/main/Grid.js" />
+        <option value="$PROJECT_DIR$/app/view/main/Main.js" />
+        <option value="$PROJECT_DIR$/app/view/edit/CategoryBrowse.js" />
+        <option value="$PROJECT_DIR$/app/view/edit/CategoryformController.js" />
+        <option value="$PROJECT_DIR$/app/view/edit/Categoryform.js" />
+        <option value="$PROJECT_DIR$/app/view/edit/Articleform.js" />
+        <option value="$USER_HOME$/Documents/WeChat Files/wxid_veco4xmjldde11/Files/新建文件夹 (2)/KBase/app/view/main/Manage.js" />
+        <option value="$PROJECT_DIR$/app/Application.js" />
+        <option value="$PROJECT_DIR$/app/view/main/Editpage.js" />
+        <option value="$PROJECT_DIR$/ext/ext-all-debug.js" />
+        <option value="$PROJECT_DIR$/app/view/edit/Resourceform.js" />
       </list>
     </option>
   </component>
@@ -140,10 +123,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="x" value="713" />
+    <option name="width" value="734" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -161,6 +143,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -170,6 +153,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="KBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ext" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -269,7 +266,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,6 +275,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="SearchEverywhereHistoryKey" value="fileuplo&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -363,6 +360,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="021262c8-a30c-483c-989a-b32e0245a31b" name="Default" comment="" />
@@ -401,11 +401,19 @@
       <workItem from="1492565003601" duration="8185000" />
       <workItem from="1492583363100" duration="6842000" />
       <workItem from="1492590334837" duration="7419000" />
+      <workItem from="1492600413909" duration="766000" />
+      <workItem from="1492647725869" duration="6870000" />
+      <workItem from="1492655745113" duration="3830000" />
+      <workItem from="1492670435162" duration="4573000" />
+      <workItem from="1492679573874" duration="651000" />
+      <workItem from="1492681149357" duration="1126000" />
+      <workItem from="1492735825385" duration="1113000" />
+      <workItem from="1492738023799" duration="4382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192737000" />
+    <option name="totallyTimeSpent" value="216048000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,10 +425,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="713" y="0" width="734" height="867" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3885794" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5027855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -447,72 +455,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="39" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/model/Person.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-804">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/model/Tree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/data/tree/check-nodes.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.717.4789/HZ$D.717.4790/ExtJS6MinMvcExample-master/app/view/student/List.js" />
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/Tencent Files/1525397538/FileRecv/CheckTreePanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/view/form/CustomFields.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/view/tree/CheckTreeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/view/tree/BasicTrees.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/main/Editcontroller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -684,28 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/main/Grid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/main/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/main/Editpage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/view/form/Tag.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -713,43 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/edit/Articleform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/edit/Categoryform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryformController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -768,14 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/edit/Resourceform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/store/CategoryStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -787,41 +675,119 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryBrowseViewModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="418">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryBrowse.js">
+    <entry file="file://$PROJECT_DIR$/app/view/main/Header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-936">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-          <folding>
-            <marker date="1492595978991" expanded="true" signature="2481:2506" ph="..." />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/main/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ext-6.2.0/examples/kitchensink/classic/samples/view/button/VerticalSegmentedButtons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryBrowseController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="90" column="45" lean-forward="true" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-            <element signature="e#2426#2545#0" expanded="false" />
-            <element signature="e#2572#2770#0" expanded="false" />
-            <element signature="e#2796#2853#0" expanded="false" />
-            <marker date="1492597303718" expanded="true" signature="130:155" ph="..." />
-          </folding>
+        <state relative-caret-position="1056">
+          <caret line="48" column="19" lean-forward="true" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/main/Grid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryformController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.951.4306/HZ$D.951.4308/新建文件夹 (2)/KBase/app/view/main/Managecontroller.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.951.4306/HZ$D.951.4309/新建文件夹 (2)/KBase/app/view/main/User.js" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.951.4306/HZ$D.951.4307/新建文件夹 (2)/KBase/app/view/main/Manage.js" />
+    <entry file="file://$USER_HOME$/Documents/WeChat Files/wxid_veco4xmjldde11/Files/新建文件夹 (2)/KBase/app/view/main/Group.js" />
+    <entry file="file://$USER_HOME$/Documents/WeChat Files/wxid_veco4xmjldde11/Files/新建文件夹 (2)/KBase/app/view/main/Manage.js" />
+    <entry file="file://$PROJECT_DIR$/app/view/main/Editcontroller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/edit/CategoryBrowse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/edit/Categoryform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1804">
+          <caret line="82" column="18" lean-forward="false" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/main/Editpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="208" column="38" lean-forward="false" selection-start-line="208" selection-start-column="38" selection-end-line="208" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ext/ext-all-debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="190644" column="20" lean-forward="true" selection-start-line="190644" selection-start-column="20" selection-end-line="190644" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/edit/Articleform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="74" column="15" lean-forward="true" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/edit/Resourceform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="86" column="19" lean-forward="true" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
