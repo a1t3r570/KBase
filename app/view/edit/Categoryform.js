@@ -8,6 +8,7 @@ Ext.define('KBase.view.edit.Categoryform',{
     ],
     controller:'edit-form-controller',
 
+    // extend:'Ext.panel.Panel',
     extend:'Ext.window.Window',                 //模态窗口
     modal:true,
     resizable:false,

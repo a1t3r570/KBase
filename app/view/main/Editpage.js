@@ -1,6 +1,8 @@
 /**
  * Created by wql on 2017/4/9.
  */
+var maintab = Ext.create('KBase.view.edit.EditPanel',{});//主面板
+
 var navigationBar = {       //导航栏
     xtype:'container',
     height:40,
@@ -12,21 +14,24 @@ var navigationBar = {       //导航栏
         //fieldLabel: 'Toggle Group',
         xtype: 'fieldcontainer',
         hideLabel:true,
-
         items: [{
             xtype: 'segmentedbutton',
+            border:false,
             items: [{
                 text:'首页',
                 glyph:0xf015,
                 scale:'large',
-                pressed: true
+                pressed: true,
+                handler:'onHomeClick',
+                // border:false,
             },{
                 text:'知识体系',
                 scale:'large'
             }, {
                 text:'分类',
                 glyph:0xf029,
-                scale:'large'
+                scale:'large',
+                handler:'onCategoryClick'
             },{
                 text:'文章',
                 glyph:0xf02d,
@@ -47,137 +52,19 @@ var navigationBar = {       //导航栏
         }]
     }]
 };
-var roleInfo =  {                       //个人信息
-    xtype:'panel',
-    //border:true,
-    frame:true,
-    padding:'4 20 2 20',
-    style:{borderColor:'lightblue'},
-    width:350,
-    height:150,
-    //title:'个人资料',
-    html:'<p>个人资料</p>',
-};
-var shortcutBar = {                       //快捷按键
-    xtype:'panel',
-    width:450,
-    height:150,
-    frame:true,
-    padding:'4 20 2 20',
-    style:{borderColor:'lightblue'},
-    items:[
-        {
-            xtype:'button',
-            scale:'large',
-            text:'新增分类',
-            handler:'onAddCategory'
-            //glyph:
-        },
-        {
-            xtype:'button',
-            scale:'large',
-            text:'撰写文章',
-            handler:'onAddArticle'
-        },
-        {
-            xtype:'button',
-            scale:'large',
-            text:'新增资料',
-            handler:'onAddResource'
-        },
-        {
-            xtype:'button',
-            scale:'large',
-            text:'新增模板'
-        }
-    ]
-};
-var todoList = {
-    xtype:'panel',
-    padding:'4 20 2 20',
-    minWidth:350,
-    minHeight:200,
-    frame:true,
-    flex:3,
-    style:{borderColor:'lightblue'},
-    layout:{
-        type:'table',
-        columns:3
-    },
-    defaults:{
-        bodyStyle:'padding: 20px'
-    },
-    items:[
-        {
-            html:'<p>待办任务</p>',
-            rowspan:3
-        },
-        {
-            html:'草稿：[分类][文章][资料]'
-        },
-        {
-            html:'待审核：[分类][文章][资料]'
-        },
-        {
-            html:'审核中：[分类][文章][资料]'
-        },
-        {
-            html:'待发布：[分类][文章][资料]'
-        },
-        {
-            html:'已过期：[分类][文章][资料]'
-        }
-
-    ]
-};
 var editPanel = {           //编辑面板
     xtype:'panel',
     region:'center',
+    reference:'editpanel',
     minWidth:400,
     minHeight:200,
     margin:'4 2 2 4',
     //layout:'anchor',
-    layout:{
-        type:'vbox',
-        align:'stretch'
-    },
     title:'Welcome',
+    layout:'fit',
     items:[
-        {
-            xtype:'panel',
-            layout:{
-                type:'hbox',
-                align:'stretch'
-            },
-            items:[
-                roleInfo,
-                {                   //填充块
-                    xtype:'panel',
-                    flex:1
-                },
-                shortcutBar
-            ]
-        },
-        {
-            xtype:'panel',
-            flex:1,
-            layout:{
-                type:'hbox',
-                align:'stretch'
-            },
-            items:[
-                {                   //填充块
-                    xtype:'panel',
-                    flex:1
-                },
-                todoList,
-                {                   //填充块
-                    xtype:'panel',
-                    flex:2
-                }
-            ]
-        }
-    ]
+        maintab
+    ],
 };
 
 var latestPanel = {

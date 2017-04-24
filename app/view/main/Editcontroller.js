@@ -21,12 +21,19 @@ Ext.define('KBase.view.main.Editcontroller',{
         cmp = new ViewClass();
     },
     //navigationBar  routes
+    onHomeClick:function(){
+        this.redirectTo('edit/Home');
+    },
+    onCategoryClick:function(){
+        this.redirectTo('edit/Category');
+    },
+
     handleRoute:function (url) {
         // this.redirectTo('edit/Categoryform');
-       // className = Ext.ClassManager.getNameByAlias('widget.'+url);
-
-        ViewClass = Ext.ClassManager.get('KBase.view.edit.'+url);
+        className = Ext.ClassManager.getNameByAlias('widget.'+url);
+        ViewClass = Ext.ClassManager.get(className);
         cmp = new ViewClass();
-        this.getView().add(cmp);
+        this.lookup('main-tab').destroy();
+        this.lookup('editpanel').add(cmp);
     }
 });

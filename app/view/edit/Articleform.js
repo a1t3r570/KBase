@@ -1,10 +1,12 @@
 /**
  * Created by wql on 2017/4/11.
  */
+var tag = Ext.create('KBase.store.TagStore',{});
 Ext.define('KBase.view.edit.Articleform',{
     requires:[
         'KBase.view.edit.CategoryformController',
-        'KBase.view.edit.CategoryBrowse'
+        'KBase.view.edit.CategoryBrowse',
+        'KBase.store.TagStore',//这个最好放到application；里
     ],
     controller:'edit-form-controller',
 
@@ -40,6 +42,7 @@ Ext.define('KBase.view.edit.Articleform',{
                 id:'categoryfield',
                 name:'category',
                 allowBlank:false,
+                readOnly:true,
             },{
                 xtype:'splitter',
                 flex:1
@@ -55,9 +58,15 @@ Ext.define('KBase.view.edit.Articleform',{
             name:'title',
             allowBlank:false
         },{
-            xtype:'fieldcontainer',
+            xtype: 'filefield',
+            // xtype:'fieldcontainer',
             fieldLabel:'附件',
-            layout:{
+            name:'accessory',
+            buttonText:'添加',
+            buttonConfig:{
+                width:100
+            }
+            /*layout:{
                 type:'hbox',
             },
             defaults: {
@@ -76,7 +85,7 @@ Ext.define('KBase.view.edit.Articleform',{
                 xtype:'button',
                 text:'浏览',
                 width:100,
-            }]
+            }]*/
         },{
             xtype: 'displayfield',
             name: 'author',
@@ -88,7 +97,13 @@ Ext.define('KBase.view.edit.Articleform',{
         },{
             xtype: 'tagfield',
             fieldLabel:'标签',
-            name:'tag'
+            store:tag,
+            name:'tag',
+            displayField:'tag_name',
+            valueField:'tag_id',
+            createNewOnEnter: true,
+            createNewOnBlur: true,
+            filterPickList: true,
         },/*{
          xtype: 'textareafield',
          name:'digest',

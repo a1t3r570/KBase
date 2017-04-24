@@ -13,7 +13,18 @@ Ext.define('KBase.view.edit.CategoryformController',{
     onSave:function () {
         var form = this.getView().down('form');
         if(form.getForm().isValid()){
-            Ext.Ajax.request({
+            form.getForm().submit({
+                url:'https://mail.bupt.edu.cn/webmailgo.php?v=1493004083',
+                //url:serverpath+'/save',
+                hasUpload:true,//还待研究
+                success:function(response,opts){
+                    var obj = Ext.decode(response.responseText);
+                },
+                failure:function (response,opts) {
+                    var obj = Ext.decode(response.responseText);
+                }
+            });
+           /* Ext.Ajax.request({
                 url:serverpath+'/save',
                 method:'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -24,7 +35,7 @@ Ext.define('KBase.view.edit.CategoryformController',{
                 failure:function (response,opts) {
                     var obj = Ext.decode(response.responseText);
                 }
-            })
+            })*/
         }
     },
     onSubmit:function () {
