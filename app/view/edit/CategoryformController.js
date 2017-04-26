@@ -14,7 +14,7 @@ Ext.define('KBase.view.edit.CategoryformController',{
         var form = this.getView().down('form');
         if(form.getForm().isValid()){
             form.getForm().submit({
-                url:'https://mail.bupt.edu.cn/webmailgo.php?v=1493004083',
+                url:'http://10.108.113.60:8080/kbms/test/test?useId=1&action=add&param=123',
                 //url:serverpath+'/save',
                 hasUpload:true,//还待研究
                 success:function(response,opts){

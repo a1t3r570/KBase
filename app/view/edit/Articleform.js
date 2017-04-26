@@ -61,7 +61,8 @@ Ext.define('KBase.view.edit.Articleform',{
             xtype: 'filefield',
             // xtype:'fieldcontainer',
             fieldLabel:'附件',
-            name:'accessory',
+            //name:'accessory2',
+            name:'file',
             buttonText:'添加',
             buttonConfig:{
                 width:100
@@ -87,8 +88,19 @@ Ext.define('KBase.view.edit.Articleform',{
                 width:100,
             }]*/
         },{
+            xtype: 'filefield',
+            // xtype:'fieldcontainer',
+            fieldLabel:'附件',
+            // name:'accessory',
+            name:'file',
+            buttonText:'添加',
+            buttonConfig: {
+                width: 100
+            }
+        },{
             xtype: 'displayfield',
             name: 'author',
+            value:"wql",
             fieldLabel: '作者',
         },{
             xtype: 'datefield',
@@ -118,6 +130,7 @@ Ext.define('KBase.view.edit.Articleform',{
             ]
         },{
             xtype:'htmleditor',
+            name:'content',
             //height:100
         }],
     }],
