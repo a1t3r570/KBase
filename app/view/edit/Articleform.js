@@ -101,7 +101,7 @@ Ext.define('KBase.view.edit.Articleform',{
             xtype: 'displayfield',
             name: 'author',
             value:"wql",
-            fieldLabel: '作者',
+            fieldLabel: '作者'
         },{
             xtype: 'datefield',
             name: 'vaild_time',
@@ -115,12 +115,12 @@ Ext.define('KBase.view.edit.Articleform',{
             valueField:'tag_id',
             createNewOnEnter: true,
             createNewOnBlur: true,
-            filterPickList: true,
+            filterPickList: true
         },/*{
          xtype: 'textareafield',
          name:'digest',
          fieldLabel: '摘要',
-         }*/,{
+         }*/{
             xtype: 'radiogroup',
             name:'type',
             fieldLabel:'类型',

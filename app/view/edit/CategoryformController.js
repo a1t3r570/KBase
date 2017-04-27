@@ -14,9 +14,13 @@ Ext.define('KBase.view.edit.CategoryformController',{
         var form = this.getView().down('form');
         if(form.getForm().isValid()){
             form.getForm().submit({
-                url:'http://10.108.113.60:8080/kbms/test/test?useId=1&action=add&param=123',
+                url:'http://localhost:8080/kbms/filesUpload',//http://httpbin.org/post',
+                params:{
+                    userId:'1',
+                    action:'add',
+                },
                 //url:serverpath+'/save',
-                hasUpload:true,//还待研究
+                //hasUpload:true,//还待研究
                 success:function(response,opts){
                     var obj = Ext.decode(response.responseText);
                 },
@@ -24,11 +28,13 @@ Ext.define('KBase.view.edit.CategoryformController',{
                     var obj = Ext.decode(response.responseText);
                 }
             });
-           /* Ext.Ajax.request({
-                url:serverpath+'/save',
+            /*Ext.Ajax.request({
+                url:'http://localhost:8080/kbms/filesUpload',
                 method:'POST',
-                headers: { 'Content-Type': 'application/json' },
-                params:Ext.JSON.encode(form.getValues()),
+                headers: { 'Content-Type':'application/json' },//'application/json'
+                params:{
+                    userId:'111',// form.getValues(),//Ext.JSON.encode(form.getValues()),
+                },
                 success:function(response,opts){
                     var obj = Ext.decode(response.responseText);
                 },
