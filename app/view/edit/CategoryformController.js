@@ -13,8 +13,8 @@ Ext.define('KBase.view.edit.CategoryformController',{
     onSave:function () {
         var form = this.getView().down('form');
         if(form.getForm().isValid()){
-            form.getForm().submit({
-                url:'http://localhost:8080/kbms/filesUpload',//http://httpbin.org/post',
+            /*form.getForm().submit({
+                url:'http://httpbin.org/post',//http://localhost:8080/kbms/filesUpload',//http://httpbin.org/post',
                 params:{
                     userId:'1',
                     action:'add',
@@ -27,21 +27,20 @@ Ext.define('KBase.view.edit.CategoryformController',{
                 failure:function (response,opts) {
                     var obj = Ext.decode(response.responseText);
                 }
-            });
-            /*Ext.Ajax.request({
-                url:'http://localhost:8080/kbms/filesUpload',
+            });*/
+            Ext.Ajax.request({
+                url:'http://localhost:8080/kbms/test/test',//http://localhost:8080/kbms/filesUpload',
                 method:'POST',
-                headers: { 'Content-Type':'application/json' },//'application/json'
-                params:{
-                    userId:'111',// form.getValues(),//Ext.JSON.encode(form.getValues()),
-                },
+
+                headers: { 'Content-Type':'multipart/form-data' },//'application/json'
+                params: form.getFieldValues(),//Ext.JSON.encode(form.getValues()),
                 success:function(response,opts){
                     var obj = Ext.decode(response.responseText);
                 },
                 failure:function (response,opts) {
                     var obj = Ext.decode(response.responseText);
                 }
-            })*/
+            })
         }
     },
     onSubmit:function () {
