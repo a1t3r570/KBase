@@ -4,9 +4,10 @@
 var tag = Ext.create('KBase.store.TagStore',{});
 Ext.define('KBase.view.edit.Articleform',{
     requires:[
-        'KBase.view.edit.CategoryformController',
+        'KBase.view.edit.EditformController',
         'KBase.view.edit.CategoryBrowse',
         'KBase.store.TagStore',//这个最好放到application；里
+        //'Ext.ux.plugins'
     ],
     controller:'edit-form-controller',
 
@@ -41,6 +42,7 @@ Ext.define('KBase.view.edit.Articleform',{
                 width:400,
                 id:'categoryfield',
                 name:'category',
+                reference:'category',
                 allowBlank:false,
                 readOnly:true,
             },{
@@ -56,6 +58,7 @@ Ext.define('KBase.view.edit.Articleform',{
             fieldLabel:'标题',
             xtype:'textfield',
             name:'title',
+            reference:'title',
             allowBlank:false
         },{
             xtype: 'filefield',
@@ -63,6 +66,7 @@ Ext.define('KBase.view.edit.Articleform',{
             fieldLabel:'附件',
             //name:'accessory2',
             name:'file',
+            reference:'file',
             buttonText:'添加',
             buttonConfig:{
                 width:100
@@ -93,6 +97,7 @@ Ext.define('KBase.view.edit.Articleform',{
             fieldLabel:'附件',
             // name:'accessory',
             name:'file',
+            reference:'file',
             buttonText:'添加',
             buttonConfig: {
                 width: 100
@@ -100,17 +105,20 @@ Ext.define('KBase.view.edit.Articleform',{
         },{
             xtype: 'displayfield',
             name: 'author',
+            reference:'author',
             value:"wql",
             fieldLabel: '作者'
         },{
             xtype: 'datefield',
             name: 'vaild_time',
+            reference:'valid_time',
             fieldLabel: '有效期至'
         },{
             xtype: 'tagfield',
             fieldLabel:'标签',
             store:tag,
             name:'tag',
+            reference:'tag',
             displayField:'tag_name',
             valueField:'tag_id',
             createNewOnEnter: true,
@@ -131,6 +139,10 @@ Ext.define('KBase.view.edit.Articleform',{
         },{
             xtype:'htmleditor',
             name:'content',
+            reference:'content',
+            plugins: [
+                Ext.create('KBase.view.edit.Editorplugin')
+            ],
             //height:100
         }],
     }],

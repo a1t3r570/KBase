@@ -1,23 +1,7 @@
 /**
  * Created by wql on 2017/4/14.
  */
-var tpl_list = new Ext.XTemplate(
-    '<tpl for=".">',
-    '<div class="list-item" style="background-color: #bfbfbf">',
-    '<p>{text}</p>',
-    '<p>{path}</p>',
-    '</div>',
-    '<hr/>',
-    '</tpl>',
-    {
-        checkSelectedNode : function(data) {
-            //var me = this.getView();
-            //var node = me.items.first().getCmp(data.id);
-            //node.checked = true;
-            alert('z');
-        }
-    }
-);
+var nodeid=1;
 var path = '/知识库';          //返回最终路径                        //还是存在问题
 Ext.define('KBase.view.edit.CategoryBrowseController', {
     extend: 'Ext.app.ViewController',
@@ -27,9 +11,41 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
         vm.bind('{selectedsearchItem}','onSelect',this);
     },
 
+    onItemExpand:function (node) {
+        tree = this.lookup('treepanel');
+        store = tree.getStore();
+        if(!node.isLeaf()&&!node.hasChildNodes()) {//如果是分支节点并且没有加载过数据
+            Ext.Ajax.request({
+                url: 'http://localhost:8080/kbms/base/category/get',//http://localhost:8080/kbms/filesUpload',
+                method: 'POST',
+                params: {
+                    userId: '1',
+                    action: 'add',
+                    param: Ext.JSON.encode({category: 'E:' + node.getPath('text')}),
+                },
+                success: function (response, opts) {
+                    var obj = Ext.decode(response.responseText);
+                    for (var i = 0; i < obj.data.length; ++i) {
+                        var newnode = [{text: obj.data[i], checked:false,id:++nodeid, leaf: false}];
+                        var pnode = store.getNodeById(node.id);
+                        pnode.appendChild(newnode);
+                        pnode.set('leaf', false);
+                    }
+                    //store.reload();
+                    //pnode.expend();
+                },
+                failure: function (response, opts) {
+                    var obj = Ext.decode(response.responseText);
+                }
+            });
+        }
+        /*else{//Store里有数据，直接展开
+            //tree.expandPath(node.getPath('text'),'text');
+        }*/
+    },
     onCheckChange:function (node) {
        var me = this.getView();        //获取对应视图类（如何全局,this无效问题）
-        this.onSearchClick();
+        //this.onSearchClick();
         var records = me.items.first().getChecked();
         for(var i = 0;i<records.length; ++i){
             if(records[i].id != node.id){

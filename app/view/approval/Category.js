@@ -83,29 +83,893 @@ var tabPanel = {
     defaults:{
         bodyStyle:'padding: 20px'
     },
-
     items:[{
+        region:'center',
         xtype: 'tabpanel',
-
         items:[{
+
             title:'全部',
-            html:'1'
+            items:[
+                {
+                    xtype:'gridpanel',
+                    title:'|分类列表',
+                    frame:true,
+                    store: Ext.data.StoreManager.lookup('simpsonsStore'),
+                    height:300,
+                    forceFit:true,
+                    stripeRows:true,
+                    selType: "checkboxmodel",
+                    bbar:{
+                        xtype:'pagingtoolbar',
+                        store:'',
+                        dock:'bottom',
+                        displayInfo:true
+                    },
+                    requires: [
+                        'Ext.grid.column.Action'
+                    ],
+                    autoScroll: true,
+                    tbar: ['->',{
+
+                        xtype:'button',
+                        text: '撤回',
+                        handler: function () {}
+                    },
+                        {
+                            xtype:'button',
+                            text: '审核通过',
+                            handler: function () {
+                            }
+                        },
+                        {
+                            xtype:'button',
+                            text: '发布',
+                            handler: function () {
+                            }
+                        } ,{
+                            xtype:'button',
+                            text: '删除',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '重置父分类',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '新增分类',
+                            handler: function () {
+                            }
+                        }
+
+                    ],
+
+                    columns: [
+                        { xtype: 'actioncolumn',
+                            text: '操作', dataIndex: 'active',//flex:1,
+                            items: [{
+                                xtype:'button',
+                                glyph:0xf002,
+                            },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0ad,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf00d,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0e2,
+                                },
+
+                            ],},
+
+                        { text: '标题', dataIndex: 'title',flex: 1,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '关键词', dataIndex: 'key', //flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '所属分类', dataIndex: 'parentcategory', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '有效时间', dataIndex: 'validtime', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+
+                    ],
+                    store:{data: [
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+
+                    ],
+                        fields:[
+                            {name:'title'},
+                            {name:'key'},
+                            {name:'parentcategory'},
+                            {name:'validtime'}
+                        ]
+                    }
+
+                },
+
+            ]
         }, {
             title:'草稿',
-            html:'2'
+            items:[
+                {
+                    xtype:'gridpanel',
+                    title:'|分类列表',
+                    frame:true,
+                    store: Ext.data.StoreManager.lookup('simpsonsStore'),
+                    height:300,
+                    forceFit:true,
+                    stripeRows:true,
+                    selType: "checkboxmodel",
+                    bbar:{
+                        xtype:'pagingtoolbar',
+                        store:'',
+                        dock:'bottom',
+                        displayInfo:true
+                    },
+                    requires: [
+                        'Ext.grid.column.Action'
+                    ],
+                    autoScroll: true,
+                    tbar: ['->',{
+
+                        xtype:'button',
+                        text: '撤回',
+                        handler: function () {}
+                    },
+                        {
+                            xtype:'button',
+                            text: '审核通过',
+                            handler: function () {
+                            }
+                        },
+                        {
+                            xtype:'button',
+                            text: '发布',
+                            handler: function () {
+                            }
+                        } ,{
+                            xtype:'button',
+                            text: '删除',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '重置父分类',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '新增分类',
+                            handler: function () {
+                            }
+                        }
+
+                    ],
+
+                    columns: [
+                        { xtype: 'actioncolumn',
+                            text: '操作', dataIndex: 'active',//flex:1,
+                            items: [{
+                                xtype:'button',
+                                glyph:0xf002,
+                            },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0ad,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf00d,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0e2,
+                                },
+
+                            ],},
+
+                        { text: '标题', dataIndex: 'title',flex: 1,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '关键词', dataIndex: 'key', //flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '所属分类', dataIndex: 'parentcategory', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '有效时间', dataIndex: 'validtime', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+
+                    ],
+                    store:{data: [
+                        ['放假通知草稿','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+
+
+                    ],
+                        fields:[
+                            {name:'title'},
+                            {name:'key'},
+                            {name:'parentcategory'},
+                            {name:'validtime'}
+                        ]
+                    }
+
+                },
+
+            ]
         }, {
-            title:'待审核'
+            title:'待审核',
+            items:[
+                {
+                    xtype:'gridpanel',
+                    title:'|分类列表',
+                    frame:true,
+                    store: Ext.data.StoreManager.lookup('simpsonsStore'),
+                    height:300,
+                    forceFit:true,
+                    stripeRows:true,
+                    selType: "checkboxmodel",
+                    bbar:{
+                        xtype:'pagingtoolbar',
+                        store:'',
+                        dock:'bottom',
+                        displayInfo:true
+                    },
+                    requires: [
+                        'Ext.grid.column.Action'
+                    ],
+                    autoScroll: true,
+                    tbar: ['->',{
+
+                        xtype:'button',
+                        text: '撤回',
+                        handler: function () {}
+                    },
+                        {
+                            xtype:'button',
+                            text: '审核通过',
+                            handler: function () {
+                            }
+                        },
+                        {
+                            xtype:'button',
+                            text: '发布',
+                            handler: function () {
+                            }
+                        } ,{
+                            xtype:'button',
+                            text: '删除',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '重置父分类',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '新增分类',
+                            handler: function () {
+                            }
+                        }
+
+                    ],
+
+                    columns: [
+                        { xtype: 'actioncolumn',
+                            text: '操作', dataIndex: 'active',//flex:1,
+                            items: [{
+                                xtype:'button',
+                                glyph:0xf002,
+                            },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0ad,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf00d,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0e2,
+                                },
+
+                            ],},
+
+                        { text: '标题', dataIndex: 'title',flex: 1,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '关键词', dataIndex: 'key', //flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '所属分类', dataIndex: 'parentcategory', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '有效时间', dataIndex: 'validtime', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+
+                    ],
+                    store:{data: [
+                        ['放假通知待审核','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+
+
+                    ],
+                        fields:[
+                            {name:'title'},
+                            {name:'key'},
+                            {name:'parentcategory'},
+                            {name:'validtime'}
+                        ]
+                    }
+
+                },
+
+            ]
         }, {
-            title:'审核中'
+            title:'审核中',
+            items:[
+                {
+                    xtype:'gridpanel',
+                    title:'|分类列表',
+                    frame:true,
+                    store: Ext.data.StoreManager.lookup('simpsonsStore'),
+                    height:300,
+                    forceFit:true,
+                    stripeRows:true,
+                    selType: "checkboxmodel",
+                    bbar:{
+                        xtype:'pagingtoolbar',
+                        store:'',
+                        dock:'bottom',
+                        displayInfo:true
+                    },
+                    requires: [
+                        'Ext.grid.column.Action'
+                    ],
+                    autoScroll: true,
+                    tbar: ['->',{
+
+                        xtype:'button',
+                        text: '撤回',
+                        handler: function () {}
+                    },
+                        {
+                            xtype:'button',
+                            text: '审核通过',
+                            handler: function () {
+                            }
+                        },
+                        {
+                            xtype:'button',
+                            text: '发布',
+                            handler: function () {
+                            }
+                        } ,{
+                            xtype:'button',
+                            text: '删除',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '重置父分类',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '新增分类',
+                            handler: function () {
+                            }
+                        }
+
+                    ],
+
+                    columns: [
+                        { xtype: 'actioncolumn',
+                            text: '操作', dataIndex: 'active',//flex:1,
+                            items: [{
+                                xtype:'button',
+                                glyph:0xf002,
+                            },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0ad,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf00d,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0e2,
+                                },
+
+                            ],},
+
+                        { text: '标题', dataIndex: 'title',flex: 1,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '关键词', dataIndex: 'key', //flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '所属分类', dataIndex: 'parentcategory', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '有效时间', dataIndex: 'validtime', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+
+                    ],
+                    store:{data: [
+                        ['放假通知审核中','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+
+
+                    ],
+                        fields:[
+                            {name:'title'},
+                            {name:'key'},
+                            {name:'parentcategory'},
+                            {name:'validtime'}
+                        ]
+                    }
+
+                },
+
+            ]
         }, {
-            title:'待发布'
+            title:'待发布',
+            items:[
+                {
+                    xtype:'gridpanel',
+                    title:'|分类列表',
+                    frame:true,
+                    store: Ext.data.StoreManager.lookup('simpsonsStore'),
+                    height:300,
+                    forceFit:true,
+                    stripeRows:true,
+                    selType: "checkboxmodel",
+                    bbar:{
+                        xtype:'pagingtoolbar',
+                        store:'',
+                        dock:'bottom',
+                        displayInfo:true
+                    },
+                    requires: [
+                        'Ext.grid.column.Action'
+                    ],
+                    autoScroll: true,
+                    tbar: ['->',{
+
+                        xtype:'button',
+                        text: '撤回',
+                        handler: function () {}
+                    },
+                        {
+                            xtype:'button',
+                            text: '审核通过',
+                            handler: function () {
+                            }
+                        },
+                        {
+                            xtype:'button',
+                            text: '发布',
+                            handler: function () {
+                            }
+                        } ,{
+                            xtype:'button',
+                            text: '删除',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '重置父分类',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '新增分类',
+                            handler: function () {
+                            }
+                        }
+
+                    ],
+
+                    columns: [
+                        { xtype: 'actioncolumn',
+                            text: '操作', dataIndex: 'active',//flex:1,
+                            items: [{
+                                xtype:'button',
+                                glyph:0xf002,
+                            },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0ad,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf00d,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0e2,
+                                },
+
+                            ],},
+
+                        { text: '标题', dataIndex: 'title',flex: 1,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '关键词', dataIndex: 'key', //flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '所属分类', dataIndex: 'parentcategory', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '有效时间', dataIndex: 'validtime', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+
+                    ],
+                    store:{data: [
+                        ['放假通知待发布','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+
+                    ],
+                        fields:[
+                            {name:'title'},
+                            {name:'key'},
+                            {name:'parentcategory'},
+                            {name:'validtime'}
+                        ]
+                    }
+
+                },
+
+            ]
         }, {
-            title:'已发布'
+            title:'已发布',
+            items:[
+                {
+                    xtype:'gridpanel',
+                    title:'|分类列表',
+                    frame:true,
+                    store: Ext.data.StoreManager.lookup('simpsonsStore'),
+                    height:300,
+                    forceFit:true,
+                    stripeRows:true,
+                    selType: "checkboxmodel",
+                    bbar:{
+                        xtype:'pagingtoolbar',
+                        store:'',
+                        dock:'bottom',
+                        displayInfo:true
+                    },
+                    requires: [
+                        'Ext.grid.column.Action'
+                    ],
+                    autoScroll: true,
+                    tbar: ['->',{
+
+                        xtype:'button',
+                        text: '撤回',
+                        handler: function () {}
+                    },
+                        {
+                            xtype:'button',
+                            text: '审核通过',
+                            handler: function () {
+                            }
+                        },
+                        {
+                            xtype:'button',
+                            text: '发布',
+                            handler: function () {
+                            }
+                        } ,{
+                            xtype:'button',
+                            text: '删除',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '重置父分类',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '新增分类',
+                            handler: function () {
+                            }
+                        }
+
+                    ],
+
+                    columns: [
+                        { xtype: 'actioncolumn',
+                            text: '操作', dataIndex: 'active',//flex:1,
+                            items: [{
+                                xtype:'button',
+                                glyph:0xf002,
+                            },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0ad,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf00d,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0e2,
+                                },
+
+                            ],},
+
+                        { text: '标题', dataIndex: 'title',flex: 1,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '关键词', dataIndex: 'key', //flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '所属分类', dataIndex: 'parentcategory', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '有效时间', dataIndex: 'validtime', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+
+                    ],
+                    store:{data: [
+                        ['放假通知已发布','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+
+                    ],
+                        fields:[
+                            {name:'title'},
+                            {name:'key'},
+                            {name:'parentcategory'},
+                            {name:'validtime'}
+                        ]
+                    }
+
+                },
+
+            ]
         }, {
-            title:'已过期'
+            title:'已过期',
+            items:[
+                {
+                    xtype:'gridpanel',
+                    title:'|分类列表',
+                    frame:true,
+                    store: Ext.data.StoreManager.lookup('simpsonsStore'),
+                    height:300,
+                    forceFit:true,
+                    stripeRows:true,
+                    selType: "checkboxmodel",
+                    bbar:{
+                        xtype:'pagingtoolbar',
+                        store:'',
+                        dock:'bottom',
+                        displayInfo:true
+                    },
+                    requires: [
+                        'Ext.grid.column.Action'
+                    ],
+                    autoScroll: true,
+                    tbar: ['->',{
+
+                        xtype:'button',
+                        text: '撤回',
+                        handler: function () {}
+                    },
+                        {
+                            xtype:'button',
+                            text: '审核通过',
+                            handler: function () {
+                            }
+                        },
+                        {
+                            xtype:'button',
+                            text: '发布',
+                            handler: function () {
+                            }
+                        } ,{
+                            xtype:'button',
+                            text: '删除',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '重置父分类',
+                            handler: function () {
+                            }
+                        }, {
+                            xtype:'button',
+                            text: '新增分类',
+                            handler: function () {
+                            }
+                        }
+
+                    ],
+
+                    columns: [
+                        { xtype: 'actioncolumn',
+                            text: '操作', dataIndex: 'active',//flex:1,
+                            items: [{
+                                xtype:'button',
+                                glyph:0xf002,
+                            },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0ad,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf00d,
+                                },
+                                {
+                                    xtype:'button',
+                                    glyph:0xf0e2,
+                                },
+
+                            ],},
+
+                        { text: '标题', dataIndex: 'title',flex: 1,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '关键词', dataIndex: 'key', //flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '所属分类', dataIndex: 'parentcategory', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+                        { text: '有效时间', dataIndex: 'validtime', flex: 1 ,
+                            renderer:function(value){
+                                return '<span style="font-size:16px;">' + value + '</span>';
+                            }},
+
+                    ],
+                    store:{data: [
+                        ['放假通知已过期','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+                        ['放假通知','关键字','知识库','永久'],
+
+                    ],
+                        fields:[
+                            {name:'title'},
+                            {name:'key'},
+                            {name:'parentcategory'},
+                            {name:'validtime'}
+                        ]
+                    }
+
+                },
+
+            ]
         }]
     }]
 };
+
+
+
+
 
 Ext.define('KBase.view.approval.Category',{
     extend:'Ext.container.Container',
@@ -115,12 +979,13 @@ Ext.define('KBase.view.approval.Category',{
     autoShow:true,
     //region:'center',
     /*layout:{
-        type:'vbox',
-        align:'stretch'
-    },*/
+     type:'vbox',
+     align:'stretch'
+     },*/
 
     items:[
         searchBar,
-        tabPanel
+        tabPanel,
+        //grid,
     ]
 });

@@ -3,7 +3,7 @@
  */
 Ext.define('KBase.view.edit.Resourceform',{
     requires:[
-        'KBase.view.edit.CategoryformController',
+        'KBase.view.edit.EditformController',
         'KBase.view.edit.CategoryBrowse'
     ],
     controller:'edit-form-controller',

@@ -11,11 +11,11 @@ Ext.define('KBase.view.edit.CategoryBrowseViewModel',{
     stores:{
         lefttree:{
            type:'category-store',
-            root:{
+            /*root:{
                 text:'知识库',
                 expanded:true,
                 checked:true
-            },
+            },*/
         },
         searchlist:{
             model:searchItem,

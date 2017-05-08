@@ -51,7 +51,7 @@ Ext.define('KBase.view.edit.CategoryBrowse',{
 
         listeners:{
             checkchange:'onCheckChange',
-
+            beforeitemexpand :'onItemExpand',
         }
     },{
         xtype:'panel',
