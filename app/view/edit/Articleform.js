@@ -9,6 +9,9 @@ Ext.define('KBase.view.edit.Articleform',{
         'KBase.store.TagStore',//这个最好放到application；里
         //'Ext.ux.plugins'
     ],
+    config:{
+        name:'article'
+    },
     controller:'edit-form-controller',
 
     extend:'Ext.window.Window',
@@ -124,11 +127,7 @@ Ext.define('KBase.view.edit.Articleform',{
             createNewOnEnter: true,
             createNewOnBlur: true,
             filterPickList: true
-        },/*{
-         xtype: 'textareafield',
-         name:'digest',
-         fieldLabel: '摘要',
-         }*/{
+        },{
             xtype: 'radiogroup',
             name:'type',
             fieldLabel:'类型',
@@ -140,10 +139,16 @@ Ext.define('KBase.view.edit.Articleform',{
             xtype:'htmleditor',
             name:'content',
             reference:'content',
-            plugins: [
+            /*plugins: [
                 Ext.create('KBase.view.edit.Editorplugin')
-            ],
+            ],*/
             //height:100
+        },{
+            xtype:'textfield',
+            name: 'state',
+            reference:'state',
+            hidden:true,
+            value:"0",
         }],
     }],
 

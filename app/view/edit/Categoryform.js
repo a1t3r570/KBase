@@ -1,20 +1,25 @@
 /**
  * Created by wql on 2017/4/11.
  */
+var tag = Ext.create('KBase.store.TagStore',{});
 Ext.define('KBase.view.edit.Categoryform',{
     requires:[
         'KBase.view.edit.EditformController',
-        'KBase.view.edit.CategoryBrowse'
+        'KBase.view.edit.CategoryBrowse',
+        'KBase.store.TagStore',//这个最好放到application里
     ],
-    controller:'edit-form-controller',
-
     // extend:'Ext.panel.Panel',
     extend:'Ext.window.Window',                 //模态窗口
     modal:true,
     resizable:false,
     //draggable:false,
 
-    xtype:'Ext.form.Panel',                     //表单面板
+    config:{
+        name:'category'
+    },
+    controller:'edit-form-controller',
+
+    //xtype:'Ext.form.Panel',                     //表单面板
     frame:true,
     width:750,
     height:500,
@@ -55,10 +60,17 @@ Ext.define('KBase.view.edit.Categoryform',{
             xtype:'textfield',
             name:'title',
             allowBlank:false
-        },{                         //再修改
+        },{
             xtype: 'tagfield',
             fieldLabel:'标签',
+            store:tag,
             name:'tag',
+            reference:'tag',
+            displayField:'tag_name',
+            valueField:'tag_id',
+            createNewOnEnter: true,
+            createNewOnBlur: true,
+            filterPickList: true
         },{
             xtype: 'displayfield',
             name: 'author',
@@ -78,6 +90,12 @@ Ext.define('KBase.view.edit.Categoryform',{
                 {boxLabel:'二维表形', inputValue:3},
                 {boxLabel:'课程形', inputValue:4},
             ]
+        },{
+            xtype:'textfield',
+            name: 'state',
+            reference:'state',
+            hidden:true,
+            value:"0",
         }],
     }],
     buttons:[{                  //再修改

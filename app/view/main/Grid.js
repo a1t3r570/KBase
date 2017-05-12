@@ -87,7 +87,7 @@ var grid = {
         {
             xtype: 'actioncolumn',
             //padding:'0 0 0 20',
-            // width: 20,
+             width: 20,
             items: [{
                 xtype:'button',
                 style:{

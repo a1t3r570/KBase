@@ -10,10 +10,12 @@ Ext.define('KBase.view.edit.EditformController',{
         cmp = new ViewClass();
     },
     onSave:function () {
+        var me = this.getView();
         var form = this.getView().down('form');
+        var type = this.getView().getName();
         if(form.getForm().isValid()){
             form.getForm().submit({
-                 url:'http://localhost:8080/kbms/file/filesUpload',//http://localhost:8080/kbms/filesUpload',//http://httpbin.org/post',
+                 url:'http://localhost:8080/kbms/base/'+type+'/upload',//http://localhost:8080/kbms/filesUpload',//http://httpbin.org/post',
                  params:{
                      userId:'1',
                      action:'add',
@@ -21,8 +23,10 @@ Ext.define('KBase.view.edit.EditformController',{
                  },
                 //url:serverpath+'/save',
                 //hasUpload:true,//还待研究
-                success:function(response,opts){
-                    var obj = Ext.decode(response.responseText);
+                success:function(form,action){
+                    //var obj = Ext.decode(response);
+                    Ext.Msg.alert('Success',action.result.msg);
+                    me.close();
                 },
                 failure:function (response,opts) {
                     var obj = Ext.decode(response.responseText);

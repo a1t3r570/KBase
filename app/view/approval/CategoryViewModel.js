@@ -1,0 +1,41 @@
+/**
+ * Created by wql on 2017/5/9.
+ */
+var listItem = Ext.create('Ext.data.Model',{
+   fields:['title','tag','category','valid_time','state']
+});
+Ext.define('KBase.view.approval.CategoryViewModel',{
+    extend:'Ext.app.ViewModel',
+    alias:'viewmodel.category1',
+
+    stores:{
+        total:{
+            model:listItem,
+            autoLoad:true,
+        },
+        draft:{
+            model:listItem,
+            autoLoad:true,
+        },
+        pending:{
+            model:listItem,
+            autoLoad:true,
+        },
+        inreview:{
+            model:listItem,
+            autoLoad:true,
+        },
+        unpublished:{
+            model:listItem,
+            autoLoad:true,
+        },
+        published:{
+            model:listItem,
+            autoLoad:true,
+        },
+        expired:{
+            model:listItem,
+            autoLoad:true,
+        }
+    }
+})

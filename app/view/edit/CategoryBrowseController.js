@@ -2,7 +2,7 @@
  * Created by wql on 2017/4/14.
  */
 var nodeid=1;
-var path = '/知识库';          //返回最终路径                        //还是存在问题
+var path = '知识库';          //返回最终路径                        //还是存在问题
 Ext.define('KBase.view.edit.CategoryBrowseController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.category-browse',
@@ -10,13 +10,18 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
     initViewModel:function (vm) {
         vm.bind('{selectedsearchItem}','onSelect',this);
     },
-
+    afterRender:function () {
+        tree = this.getViewModel().getStore('lefttree');
+        root = tree.getRoot();
+        this.onItemExpand(root);
+    },
     onItemExpand:function (node) {
-        tree = this.lookup('treepanel');
-        store = tree.getStore();
+        tree = this.getViewModel().getStore('lefttree');
+        //store = tree.getStore();
         if(!node.isLeaf()&&!node.hasChildNodes()) {//如果是分支节点并且没有加载过数据
             Ext.Ajax.request({
-                url: 'http://localhost:8080/kbms/base/category/get',//http://localhost:8080/kbms/filesUpload',
+                async:false,
+                url: 'http://localhost:8080/kbms/base/category/scan',//http://localhost:8080/kbms/filesUpload',
                 method: 'POST',
                 params: {
                     userId: '1',
@@ -26,10 +31,10 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
                 success: function (response, opts) {
                     var obj = Ext.decode(response.responseText);
                     for (var i = 0; i < obj.data.length; ++i) {
-                        var newnode = [{text: obj.data[i], checked:false,id:++nodeid, leaf: false}];
-                        var pnode = store.getNodeById(node.id);
+                        var newnode = [{text: obj.data[i][0], checked:false,id:++nodeid, leaf: obj.data[i][1]}];
+                        var pnode = tree.getNodeById(node.id);
                         pnode.appendChild(newnode);
-                        pnode.set('leaf', false);
+                        //pnode.set('leaf', false);
                     }
                     //store.reload();
                     //pnode.expend();
@@ -52,20 +57,43 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
                 records[i].set({checked:false});
             }
         };
-        //var me = this.getViewModel();    //的确双向绑定，但是暂时没啥用，因为选完了就窗口关闭了，点击，还会重新浏览窗口
-        //me.getStores('{lefttree}')
+        var me = this.getViewModel();    //的确双向绑定，但是暂时没啥用，因为选完了就窗口关闭了，点击，还会重新浏览窗口
+        me.getStores('{lefttree}')
         path = node.getPath('text');
     },
     onSearchClick:function () {
         //var me = this.getView();
-        var tree = this.getViewModel().getStore('lefttree');   //获取viewmodel中store数据对象
-        var phrase = this.lookupReference('searchfield').value, //获取搜索框的内容
-            root = tree.getRoot();              //通过treeModel获取根节点
+        // var tree = this.getViewModel().getStore('lefttree');   //获取viewmodel中store数据对象
+        var phrase = this.lookupReference('searchfield').value; //获取搜索框的内容
+            // root = tree.getRoot();              //通过treeModel获取根节点
             //root=me.items.first().getRootNode();   //通过视图获取获取根节点
-        var obj=[];
-         var list = this.getViewModel().getStore('searchlist');
+        //var obj=[];
+        var list = this.getViewModel().getStore('searchlist');
+        Ext.Ajax.request({
+            url: 'http://localhost:8080/kbms/base/category/search',//http://localhost:8080/kbms/filesUpload',
+            method: 'POST',
+            params: {
+                userId: '1',
+                action: 'add',
+                param: Ext.JSON.encode({category: phrase}),
+            },
+            success: function (response, opts) {
+                var Items=[];
+                var obj = Ext.decode(response.responseText);
 
-        findchildnode(root);
+                for(var i=0;i<obj.data.length;++i){
+                    var item = {text:'',path:''};
+                    item.text = obj.data[i][0];
+                    item.path = obj.data[i][2];
+                    Items.push(item);
+                }
+                list.setData(Items);
+            },
+            failure: function (response, opts) {
+                var obj = Ext.decode(response.responseText);
+            }
+        });
+        /*findchildnode(root);
 
         function findchildnode(node) {//深度遍历
             if(node.data.text == phrase){
@@ -79,8 +107,8 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
             for(var i=0;i<childnodes.length;++i){//从节点中取出子节点依次遍历
                 findchildnode(childnodes[i]);
             }
-        }
-        list.setData(obj);                      //重写searchlist的Data
+        }*/
+        //list.setData(obj);                      //重写searchlist的Data
         //var cmp = me.lookupReference('searchlist');
         //tpl_list.overwrite(cmp.body,list);
     },
@@ -103,13 +131,17 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
    },
 
     onSelect:function (selection) {
-        var me = this;
-        if(selection){
-            this.lookup('treepanel').selectPath(selection.data.path,'text','/',function(success,lastNode){
-                lastNode.set('checked',true);
-                me.onCheckChange(lastNode);
-            });        //选中对应节点
-
+        if(selection != null) {
+            var me = this;
+            this.lookup('treepanel').selectPath(selection.data.path, 'text', '/', function (success, lastNode) {
+                if (lastNode.getPath('text') == selection.data.path) {//已经扩展过了
+                    lastNode.set('checked', true);
+                    me.onCheckChange(lastNode);
+                    flag = false;
+                } else {
+                    me.onSelect(selection);
+                }
+            });
         }
     }
 });
