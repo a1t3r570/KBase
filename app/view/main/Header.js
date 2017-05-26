@@ -6,6 +6,8 @@ Ext.define('KBase.view.main.Header',{       //不变的Top部
    // height:55,
     alias:'widget.maintop',
     style:{background:'whitesmoke'},//#4297d4
+
+    controller:'header',
     items:[
         '',
         {
@@ -21,12 +23,32 @@ Ext.define('KBase.view.main.Header',{       //不变的Top部
         {                                       //待换组件
             xtype:'button',
             text:'编辑',
-            glyph:0xf044
+            glyph:0xf044,
+           /* menu:[{
+                text:'管理'
+            }]*/
         },
         {
             xtype:'button',
             text:'退出',
-            glyph:0xf08b
+            glyph:0xf08b,
+            handler:'Signout'
         }
     ]
+});
+
+Ext.define('KBase.view.main.HeaderController', {
+    extend: 'Ext.app.ViewController',
+    alias: 'controller.header',
+    
+    Signout:function () {
+        me = this.getView();
+        mainView = me.up('panel');
+        mainView.removeAll(true);
+        ViewClass = Ext.ClassManager.get('KBase.view.main.Login');
+        cmp = Ext.create(ViewClass,{
+            anchor:'100% 100%'
+        });
+        mainView.add(cmp);
+    }
 });

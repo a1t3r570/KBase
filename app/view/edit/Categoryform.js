@@ -75,6 +75,7 @@ Ext.define('KBase.view.edit.Categoryform',{
             xtype: 'displayfield',
             name: 'author',
             fieldLabel: '作者',
+            value:'wql'
         },{
             xtype: 'datefield',
             name: 'vaild_time',

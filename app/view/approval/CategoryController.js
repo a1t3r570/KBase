@@ -65,7 +65,7 @@ Ext.define('KBase.view.approval.CategoryController',{
         var total = this.getViewModel().getStore('total');
         Ext.Ajax.request({
             async:false,
-            url:'http://localhost:8080/kbms/base/category/get',
+            url:window.url + 'category/get',
             method:'POST',
             params:{
                 userId:'1',

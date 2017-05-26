@@ -1,7 +1,9 @@
 /**
  * Created by wql on 2017/4/9.
  */
-var maintab = Ext.create('KBase.view.edit.EditPanel',{});//主面板
+var maintab = {
+    xtype:'Home',
+};//主面板
 
 var navigationBar = {       //导航栏
     xtype:'container',
@@ -101,6 +103,7 @@ Ext.define('KBase.view.main.Editpage',{
         'KBase.view.edit.Categoryform',
         'KBase.view.edit.Articleform',
         'KBase.view.edit.Resourceform',
+        'KBase.view.edit.EditPanel'
     ],
     alias:'widget.mainpage',
     controller:'edit-controller',
