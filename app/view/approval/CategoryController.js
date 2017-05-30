@@ -41,7 +41,7 @@ Ext.define('KBase.view.approval.CategoryController',{
              path.push("E:" + model[i].data.category);
         };
         Ext.Ajax.request({
-            url:'http://localhost:8080/kbms/base/article/updatestate',
+            url: window.url + 'article/updatestate',
             method:'POST',
             params:{
                 userId:'1',

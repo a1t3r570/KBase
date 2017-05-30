@@ -21,7 +21,7 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
         if(!node.isLeaf()&&!node.hasChildNodes()) {//如果是分支节点并且没有加载过数据
             Ext.Ajax.request({
                 async:false,
-                url: 'http://localhost:8080/kbms/base/category/scan',//http://localhost:8080/kbms/filesUpload',
+                url: window.url + 'category/scan',//http://localhost:8080/kbms/filesUpload',
                 method: 'POST',
                 params: {
                     userId: '1',
@@ -70,7 +70,7 @@ Ext.define('KBase.view.edit.CategoryBrowseController', {
         //var obj=[];
         var list = this.getViewModel().getStore('searchlist');
         Ext.Ajax.request({
-            url: 'http://localhost:8080/kbms/base/category/search',//http://localhost:8080/kbms/filesUpload',
+            url: window.url + 'category/search',//http://localhost:8080/kbms/filesUpload',
             method: 'POST',
             params: {
                 userId: '1',
